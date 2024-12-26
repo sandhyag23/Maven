@@ -25,10 +25,10 @@ public class BaseClass {
     	driver.get(url);
     }@BeforeMethod
     public void login() throws IOException {
-    	String loginName = f.getPropertyData("loginnm");
-    	String pwd = f.getPropertyData("pwd");
+    	String un = f.getPropertyData("userName");
+    	String pwd = f.getPropertyData("passWord");
     	LoginPage l=new LoginPage(driver);
-    	l.login(loginName, pwd);	
+    	l.login(un, pwd);	
     }@AfterMethod
     public void logout() {
     	HomePage h=new HomePage(driver);

@@ -21,6 +21,15 @@ public class CampaignModule {
 	driver.findElement(By.linkText("Campaigns")).click();
 	driver.findElement(By.xpath("//input[@value='New Campaign']")).click();
 	driver.findElement(By.name("property(Campaign Name)")).sendKeys("car expo"+Keys.ENTER);
+	//driver.findElement(By.name("property(Type)")).sendKeys("Conference"+Keys.ENTER);
+	//driver.findElement(By.name("property(Status)")).sendKeys("Active");
+	//driver.findElement(By.xpath("//input[@name='property(Expected Revenue)']")).sendKeys("8000000");
+	//driver.findElement(By.xpath("//input[@name='property(Actual Cost)']")).sendKeys("6500000");
+	//driver.findElement(By.xpath("//input[@name='property(Num sent)']")).sendKeys("300");
+	/*driver.findElement(By.xpath("//input[@name='property(Expected Response)']")).sendKeys("1500");
+	driver.findElement(By.xpath("//input[@name='property(Start Date)']")).sendKeys("12/27/2024");
+	driver.findElement(By.xpath("//input[@name='property(End Date)']")).sendKeys("12/30/2024");
+	driver.findElement(By.xpath("//input[@name='property(Budgeted Cost)']")).sendKeys("50000");*/
 	System.out.println("Campaign is created");
 	driver.findElement(By.linkText("Campaigns")).click();
 	System.out.println("Campaign page is displayed");
