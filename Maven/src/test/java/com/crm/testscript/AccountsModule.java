@@ -8,9 +8,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
 
 public class AccountsModule {
-public static void main(String[] args) {
+	@Test
+  public void createAccount() {  
 	WebDriver driver=new ChromeDriver();
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -42,12 +45,11 @@ public static void main(String[] args) {
 	driver.findElement(By.id("copyAddress")).click();
 	driver.findElement(By.xpath("//td[text()='Billing to Shipping']")).click();
 	driver.findElement(By.xpath("//input[@value='Save']")).click();
-	System.out.println("Account is created");
+	Reporter.log("Account is created", true);
 	driver.findElement(By.linkText("Accounts")).click();
 	driver.findElement(By.xpath("//input[@name='searchString']")).sendKeys("tyco");
 	driver.findElement(By.xpath("//input[@type='button' and @value='Go']")).click();
-	System.out.println("tyco account is displayed");
-	
+	Reporter.log("tyco account is displayed", true);
 	
 }
 }

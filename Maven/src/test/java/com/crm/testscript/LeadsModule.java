@@ -20,10 +20,11 @@ public class LeadsModule {
 		driver.findElement(By.linkText("Leads")).click();
 		driver.findElement(By.xpath("//input[@value='New Lead']")).click();
 		driver.findElement(By.name("property(First Name)")).sendKeys("Nayana"+Keys.ENTER);
-		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("Krishna"+Keys.ENTER);
+		//driver.findElement(By.name("property(Company)")).sendKeys("Smart Company");
+		//driver.findElement(By.name("property(Last Name)")).sendKeys("Krishna");
+		//driver.findElement(By.xpath("//input[@type='text']")).sendKeys("Krishna");
 		driver.findElement(By.name("property(Mobile)")).sendKeys("9900256348"+Keys.ENTER);
-		//driver.findElement(By.name("property(Last Name)")).sendKeys("Krishna"+Keys.ENTER);
-		//driver.findElement(By.name("property(Company)")).sendKeys("Smart Company"+Keys.ENTER);
+	
 		
 	}
 }
