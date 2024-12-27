@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeTest;
 
 import com.crm.pom.HomePage;
 import com.crm.pom.LoginPage;
+import com.crm.pom.LogoutPage;
 
 public class BaseClass {
     public static WebDriver driver;
@@ -29,6 +30,10 @@ public class BaseClass {
     	String pwd = f.getPropertyData("pwd");
     	LoginPage l=new LoginPage(driver);
     	l.login(un, pwd);	
+    }@AfterMethod
+    public void logout() {
+    	LogoutPage p = new LogoutPage(driver);
+    	p.getLogoutBtn().click();
     }@AfterTest
     public void closeBrowser() {
     	driver.manage().window().minimize();
